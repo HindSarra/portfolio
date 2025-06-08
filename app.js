@@ -1,7 +1,7 @@
-const btnMenu= document.querySelector('.btn-rond-menu')
+const btnMenu= document.querySelector('.btn-circle-menu')
 const nav =document.querySelector('.nav-left');
 const allItemNav=document.querySelector('.nav-menu-item');
-const line=document.querySelector('.cont-ligne');
+const line=document.querySelector('.cont-line');
 
 btnMenu.addEventListener('click', ()=>{
 
