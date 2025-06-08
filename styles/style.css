@@ -65,7 +65,7 @@ body{
 
 }
 
-.cercle-profile{
+.circle-profil{
     margin:20px 0;
     width: 150px;
     height: 150px;
@@ -74,7 +74,7 @@ body{
     box-shadow: 26px 26px 53px #292929,
                 -26px -26px 53px #3d3d3d;
 }
-.cercle-profile img{
+.circle-profil img{
     width: 100px;
     position: absolute;
     top: 50%;
@@ -117,7 +117,7 @@ body{
     .blocs-menu:nth-child(7){
         display: none;
     }
-    .btn-rond-menu{
+    .btn-circle-menu{
         width: 70px;
         height: 70px;
         border: 1px solid #f1f1f1;
@@ -128,7 +128,7 @@ body{
         left:10px;
         z-index: 10;
     }
-    .cont-ligne{
+    .cont-line{
         width: 36px;
         height: 36px;
         cursor: pointer;
@@ -166,15 +166,15 @@ body{
         height: 4px;
         border-radius: 5px;
     }
-    .cont-ligne.active .line::after{
+    .cont-line.active .line::after{
         top:0;
         transform: rotate(45deg);
         transition: top 300ms ease, transform 300ms 300ms  ease;
     }
-     .cont-ligne.active .line{
+     .cont-line.active .line{
         background-color:transparent;
     }
-    .cont-ligne.active .line::before{
+    .cont-line.active .line::before{
         bottom:0;
         transform: rotate(-45deg);
         transition: bottom 300ms ease, transform 300ms 300ms ease;
