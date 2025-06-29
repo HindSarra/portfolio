@@ -1,0 +1,59 @@
+* , ::before, ::after{
+box-sizing: border-box;/* before after because we have elements befor after  */
+padding: 0;
+margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f1f1f1;
+}
+.nav-left{
+    width: 300px;
+    height: 100vh;
+    min-height: 800px;
+    background: #333;
+    position: fixed;
+    top: 0;
+    border-right: 1px dashed #f1f1f1;
+    z-index: 5;
+   transition: all 0.2s ease-in-out;
+
+}
+.blocs-menu{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.blocs-menu span{
+    font-size: 1.18rem;
+    text-align: center;
+     position: relative; /*An element with absolute position relative to its span parent not to body*/
+    font-weight: 700;
+    cursor: pointer;
+}
+.blocs-menu span a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+/* creat animation for menu link */
+.blocs-menu span::after{
+    content: '';
+    display: block;
+    width: 0;
+    margin: 5px auto 0 auto;
+    height: 2px;
+    border-radius: 2px;
+    background:#aaa;
+    transition: all 0.2s ease-out;
+}
+.blocs-menu span:hover::after{
+    width: 100%;
+}
