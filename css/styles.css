@@ -98,6 +98,21 @@ width: 70px;
 @media  screen and (max-width:1300px){
 
     .nav-left{
+    left: -300px !important;
+    width: 250px;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    .menu-appear{
+        left: 0 !important;
+    }
+    .blocs-menu:nth-child(1){
+        display: none;
+    }
+    .blocs-menu:nth-child(7){
         display: none;
     }
     .circle-btn-menu{
