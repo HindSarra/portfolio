@@ -1,9 +1,8 @@
-* , ::before, ::after{
+ * , ::before, ::after{
 box-sizing: border-box;/* before after because we have elements befor after  */
-padding: 0;
+ padding: 0; 
 margin: 0;
-}
-
+} 
 html{
     scroll-behavior: smooth;
 }
@@ -12,7 +11,7 @@ body{
     background: #f1f1f1;
 }
 /* -------------Navigation------------- */
-.nav-left{
+ .nav-left{
     width: 300px;
     height: 100vh;
     min-height: 800px;
@@ -36,7 +35,7 @@ body{
     font-size: 1.18rem;
     text-align: center;
      position: relative; /*An element with absolute position relative to its span parent not to body*/
-    font-weight: 700;
+     font-weight: 700;
     cursor: pointer;
 }
 .blocs-menu span a {
@@ -45,7 +44,7 @@ body{
 }
 
 /* creat animation for menu link */
-.blocs-menu span::after{
+ .blocs-menu span::after{
     content: '';
     display: block;
     width: 0;
@@ -57,7 +56,7 @@ body{
 }
 .blocs-menu span:hover::after{
     width: 100%;
-}
+} 
 /* Profile */
 .blocs-menu:nth-child(1){
     width: 100%;
@@ -98,16 +97,15 @@ width: 70px;
 @media  screen and (max-width:1300px){
 
     .nav-left{
-    left: -300px !important;
-    width: 250px;
-    min-height: 300px;
+ left: -300px !important;  
+      min-height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     }
     .menu-appear{
-        left: 0 !important;
+        left: 0px !important;
     }
     .blocs-menu:nth-child(1){
         display: none;
@@ -165,13 +163,12 @@ width: 70px;
         .cont-line.active .single-line::after{
             top:0;
             transform: rotate(45deg);
-            transition: top 300ms ease, transfome 300ms 300ms ease;
+            transition: top 300ms ease, transform 300ms 300ms ease;
         }
         .cont-line.active .single-line::before{
             bottom: 0;
             transform: rotate(-45deg);
-            transition: bottom 300ms ease,transfome 300ms 300ms ease;
-        }
+            transition: bottom 300ms ease,transform 300ms 300ms ease;}
         .cont-line.active .single-line{
             background: transparent;
         }
