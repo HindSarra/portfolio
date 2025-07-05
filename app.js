@@ -25,3 +25,30 @@ if(window.matchMedia(('max-width: 1300px'))){
 }
             
        
+// Animation writee  paragraphe acc//
+const txtAnim= document.querySelector('.txt-animation');
+
+let typewriter = new Typewriter(txtAnim, {
+    loop: false,
+    deleteSpeed: 20
+})
+
+typewriter
+.pauseFor(1800)
+.changeDelay(20)
+.typeString('Moi c\'est Hind Sarra')
+.pauseFor(300)
+.typeString('<strong>, Developpeuse Full-Stack</strong>!')
+.pauseFor(1000)
+.deleteChars(12)
+.typeString('<span style="color:#27ae60;"> CSS</span>!')
+.pauseFor(1000)
+.deleteChars(5)
+.typeString('<span style="color:#EA39ff;"> PHP</span>!')
+.pauseFor(1000)
+.deleteChars(5)
+.typeString('<span style="color:midnightblue;"> React</span>!')
+.pauseFor(1000)
+.deleteChars(8)
+.typeString('<span style="color:#ff6610;"> JavaScript</span>!')
+.start()
