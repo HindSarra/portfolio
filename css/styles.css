@@ -173,3 +173,137 @@ width: 70px;
             background: transparent;
         }
 }
+/* range  */
+.rang{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 200px;
+    border-bottom: 1px dashed #333;
+    background: #485563;
+    background-image: linear-gradient(to right, #29323c,#485563 );
+    color: #f1f1f1;
+    position: relative;
+    z-index: -1;
+
+}
+.rang-container{
+    position: relative;
+}
+.title-skill{
+    font-size: 40px;
+    text-align: center;
+    margin: 80px 0 90px 0;
+    padding-left: 300px;
+}
+.grid-skill{
+    display: grid;
+    grid-template: repeat(3,80px)/repeat(2, 500px);
+    grid-gap: 50px;
+    padding-left: 300px;
+}
+.skill-bar{
+    height:15px ;
+    background: rgb(167, 146, 243);
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.grey-bar{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    height:15px ;
+    background:rgb(216, 216, 216);
+    width: 500px;
+    border-radius: 5px;
+
+}
+.b1{
+    width: 60%;
+}
+.b2{
+    width: 90%;
+    background: rgb(243, 237, 146);
+}
+.b3{
+    width: 75%;
+        background: rgb(243, 237, 146);
+
+}
+.b4{
+    width: 70%;
+    
+}
+.b5{
+    width: 50%;
+
+}
+.b6{
+    width: 40%;
+        background: rgb(243, 237, 146);
+
+}
+.label-skill{
+    font-size: 1.5rem;
+}
+@media screen and (max-width:1400px) {
+    .grid-skill{
+grid-template: repeat(3,80px)/repeat(2, 450px);    }
+    
+.grey-bar{
+    width: 450px;
+}
+}
+@media screen and (max-width:1300px) {
+    .rang{
+        padding-left: 0;
+    }
+    .title-skill{
+        padding-left: 0;
+    }
+    .grid-skill{
+       grid-template: repeat(6,80px)/600px; 
+        padding-left: 0;
+    }
+    .grey-bar{
+        width: 600px    ;
+    }
+}
+@media screen and (max-width:700px) {
+    .grid-skill{
+     grid-template: repeat(6,80px)/400px; 
+
+    }
+    .grey-bar{
+        width: 400px;
+
+    }
+
+}
+@media screen and (max-width:450px) {
+    .rang{
+        padding-bottom: 100px;
+    }
+    .title-skill{
+        font-size:1.875rem ;
+        margin: 50px 0 60px 0;
+    }
+    .label-skill{
+        font-size: 1.25rem;
+
+    }
+    .grid-skill{
+             grid-template: repeat(6,80px)/300px; 
+            grid-gap: 40px;
+
+    }
+    .grey-bar{
+        width: 300px;
+    }
+}
