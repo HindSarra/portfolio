@@ -1,0 +1,128 @@
+.experience {
+
+width: calc(100% - 300px);
+height: auto;
+margin-left: auto;
+padding-bottom: 100px;
+
+}
+.title-exp{
+    text-align: center;
+    margin: 70px 0;
+    font-size:2.5rem ;
+    color: #333;
+
+}
+.container-exp{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+.vertical-bar{
+    height: 1000px;
+    width: 5px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    left: -30px;
+
+}
+.bool-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bool-icon-img{
+    width: 25px;
+}
+.flex-container-bloc-experience{
+    width: 800px;
+    flex-shrink: 1;
+    height: 1000px;
+    position: relative;
+}
+.bloc{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 37.5px;
+    cursor: pointer;
+    border: 1px solid #333;
+    position: relative;
+}
+.content-bloc{
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    background: white;
+    transition: transform 0.25s ease-in-out;
+    position: relative;
+    transform: translate(10px, -10px);
+}
+.content-bloc:hover{
+        transform: translate(0,0);
+}
+.bloc-1{
+    background:#fb97a0;
+}
+.bloc-2{
+    background: #bfe2ca;
+}
+.bloc-3{
+    background: #a6daef;
+
+}
+.bloc-4{
+    background:#d0e2ec;
+}
+.title-section-bloc{
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 1.5625rem;
+    padding-bottom: 10px;
+}
+/* media queries */
+@media screen and (max-width:1300px) {
+    .experience{
+        width: 100%;
+    }
+}
+@media screen and (max-width:950px) {
+    .vertical-bar{
+        height: 1200px;
+    }
+    .bloc{
+        height: 250px;
+        margin-left:60px ;
+
+    }
+    .flex-container-bloc-experience{
+        margin-right: 30px;
+    }
+}
+@media screen and (max-width:520px) {
+    .txt-section{
+        font-size: 1rem;
+
+    }
+    .bloc{
+        height: 400px;
+    }
+    .vertical-bar{
+        height: 1800px;
+    }
+}
+@media screen and (max-width:380px) {
+    
+    .txt-section{
+        font-size: 0.9rem;
+    }
+}
