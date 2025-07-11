@@ -90,16 +90,37 @@ textarea:focus{
     border: 3px solid #fff;
 }
 footer{
-    margin: 20px  50px;
-    padding: auto;
+    width: 100%;
+    padding-top: 100px;
     padding-left: 300px;
     font-size: 1.5rem;
     text-align: center;
 }
+/* media queries  */
+
+    @media screen and (max-width:1300px) {
+        .contact h2{
+            padding: 70px 0 0 0;
+        }
+        .container-form{
+            padding-left:0 ;
+        }
+        .form-group:nth-child(4){
+            justify-content: center;
+        }
+        
+    }
+    @media screen and (max-width:1300px) {
+        footer{
+            padding-left: 0;
+        }
+        
+    }
 /* animation Contact */
 .form-group:focus-within label , 
 .form-group.animation label{
     top:0;
     transform: translateY(-100%);
+    color: #8b97d7;
 
 }
