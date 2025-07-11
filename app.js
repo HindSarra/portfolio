@@ -54,15 +54,41 @@ typewriter
 .start()
 // Animation Contact
 
-const input_fields= document.querySelectorAll('input')
+const input_fields= document.querySelectorAll('input');
 
-for(let i=0 ;i< input_fields.length; i++);
 
-        let field=input_fields[i]
-        field.addEventListener('input' ,(e)=> {
-            if(e.target.value !== ''){
-                e.target.parentNode.classList.add('animation')
-            }else if (e.target.value ==''){
-                    e.target.parentNode.classList.remove('animation')
-            }
-        })
+
+
+for(let i = 0; i < input_fields.length; i++) {
+
+        let field = input_fields[i];
+          field.addEventListener('input', (e) => {
+        if(e.target.value !== ''){
+            e.target.parentNode.classList.add('animation')
+        } else if (e.target.value == ''){
+            e.target.parentNode.classList.remove('animation')
+        }
+    })
+
+}
+
+
+
+// Animation green socle + scrollMagique
+const timeLine1 =gsap.timeline({paused:true});
+const title=document.querySelector('h1')
+const btn=document.querySelectorAll('.btn-acc')
+const btnMedia =document.querySelectorAll('.media')
+const btnCircleAcc= document.querySelector('.btn-circle') 
+
+
+
+timeLine1
+.to(nav, {left: '0px',ease: Power3.easeOut, duration:0.6})
+.from(title ,{y:-50 , opacity:0, ease:Power3.easeOut, duration:0.4})
+.staggerFrom(btn,1, {opacity:0}, 0.2,'-=0.30')
+.staggerFrom(btnMedia, 1, {opacity:0} , 0.2 , '-=0.75')
+.from(btnCircleAcc,{y:-50, opacity:0, ease:Power3.easeOut, duration:0.4}, '-=1s')
+window.addEventListener('load', ()=> {
+    timeLine1.play();
+})
