@@ -92,3 +92,25 @@ timeLine1
 window.addEventListener('load', ()=> {
     timeLine1.play();
 })
+// animation scrollMagique
+const containerAbout=document.querySelector('.about')
+const titleAbout=document.querySelector('.title-about')
+const controller=new ScrollMagic.Controller()
+const  pressLeft = document.querySelector('.press-left')
+const listLeft = document.querySelectorAll('.item-list')
+
+const timeLine2 = new TimelineMax(); 
+
+timeLine2
+.from(titleAbout,  {y:-200, opacity:0, duration:0.6})
+.from(pressLeft, {y:-20, opacity:0, duration: 0.6}, '-=0.5')
+.staggerFrom(listLeft, 1, {opacity:0},0.2, '-=0.5')
+
+const scene = new ScrollMagic.Scene({
+    triggerElement: containerAbout,
+    triggerHook: 0.5, 
+    reverse:false
+})
+.setTween(timeLine2)
+.addIndicators({name: 'ANIMATION 1'})
+.addTo(controller)
