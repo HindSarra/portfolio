@@ -47,12 +47,12 @@ typewriter
 .typeString('<span style="color:#EA39ff;"> PHP</span>!')
 .pauseFor(1000)
 .deleteChars(5)
-.typeString('<span style="color:midnightblue;"> React</span>!')
+.typeString('<span style="color:#ff6610;"> React</span>!')
 .pauseFor(1000)
 .deleteChars(8)
-.typeString('<span style="color:#ff6610;"> JavaScript</span>!')
+.typeString('<span style="color:#1313C6;"> JavaScript</span>!')
 .start()
-// Animation Contact
+//-------------- Animation Contact-----------------
 
 const input_fields= document.querySelectorAll('input');
 
@@ -109,8 +109,45 @@ timeLine2
 const scene = new ScrollMagic.Scene({
     triggerElement: containerAbout,
     triggerHook: 0.5, 
-    reverse:false
-})
+    reverse: false
+})  
 .setTween(timeLine2)
-.addIndicators({name: 'ANIMATION 1'})
 .addTo(controller)
+
+
+// -----------------Animation portfolio section ------------------
+
+const portfolioContainer = document.querySelector('.portfolio');
+const titlePortfolio = document.querySelector('.title-port');
+const itemPortfolio = document.querySelectorAll('.item');
+
+const tlPortfolio = new TimelineMax();
+
+// Animation du titre
+tlPortfolio
+.from(titlePortfolio, {y: -50, opacity: 0, duration: 0.5})
+
+
+// // Animation des projets en cascade
+
+itemPortfolio.forEach((item, index) => {
+  tlPortfolio.from(item, {
+    opacity: 0,
+    y: 30,
+    ease: Power3.easeOut,
+    duration: 0.8
+  }, index * 0.2);  // 
+});
+
+const scenePortfolio = new ScrollMagic.Scene({
+  triggerElement: portfolioContainer,
+  triggerHook: 0.6,
+  reverse: true
+})
+.setTween(tlPortfolio)
+// .addIndicators({name:'wave'}) // utile pour débug
+.addTo(controller);
+
+
+
+// -------------------animation skills--------------------------

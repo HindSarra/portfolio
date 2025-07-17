@@ -35,7 +35,7 @@ body{
 .blocs-menu span{
     font-size: 1.18rem;
     text-align: center;
-     position: relative; /*An element with absolute position relative to its span parent not to body*/
+     position: relative; 
      font-weight: 700;
     cursor: pointer;
 }
@@ -49,7 +49,7 @@ body{
     content: '';
     display: block;
     width: 0;
-    margin: 5px auto 0 auto;
+    margin: 5px auto 5px auto;
     height: 2px;
     border-radius: 2px;
     background:#aaa;
@@ -90,20 +90,20 @@ cursor: pointer;
 }
 .circle-logo img{
 width: 70px;
- position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);    
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%,-50%);    
 }
 @media  screen and (max-width:1300px){
 
-    .nav-left{
+.nav-left{
  left: -300px !important;  
-      min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+ min-height: 300px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
     }
     .menu-appear{
         left: 0px !important;
@@ -111,7 +111,7 @@ width: 70px;
     .blocs-menu:nth-child(1){
         display: none;
     }
-    .blocs-menu:nth-child(7){
+    .blocs-menu:nth-child(8){
         display: none;
     }
     .circle-btn-menu{

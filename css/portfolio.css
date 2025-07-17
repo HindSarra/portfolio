@@ -18,18 +18,15 @@
     align-items: center;
 }
 .item{
-    margin: 20px;
-    width: 350px;
-    height: auto;
-    background: #f0f0f0;
-    color: #333;
-    transition: transform 0.3s ease-out;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin: 20px;
+  width: 350px;
+  height: auto;
+  background: #f0f0f0;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
 
-}
-.item:hover{
-    transform: translateY(-5px);
-}
 .cont-img-port{
     width: 100%;
     height: auto;
@@ -69,7 +66,7 @@
 .btn-projets::before{
   content:'';
   position:absolute;
-  top:-60%;                      /* hors cadre au départ */
+  top:-60%;                      
   left:-75%;
   width:50%;
   height:220%;
