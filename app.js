@@ -119,7 +119,7 @@ const scene = new ScrollMagic.Scene({
 
 const portfolioContainer = document.querySelector('.portfolio');
 const titlePortfolio = document.querySelector('.title-port');
-const itemPortfolio = document.querySelectorAll('.item');
+const itemPortfolio = document.querySelectorAll('.wave');
 
 const tlPortfolio = new TimelineMax();
 
@@ -130,9 +130,9 @@ tlPortfolio
 
 // // Animation des projets en cascade
 
-itemPortfolio.forEach((item, index) => {
-  tlPortfolio.from(item, {
-    opacity: 0,
+itemPortfolio.forEach((wave, index) => {
+  tlPortfolio.from(wave, {
+    opacity: 0, 
     y: 30,
     ease: Power3.easeOut,
     duration: 0.8
@@ -142,7 +142,7 @@ itemPortfolio.forEach((item, index) => {
 const scenePortfolio = new ScrollMagic.Scene({
   triggerElement: portfolioContainer,
   triggerHook: 0.6,
-  reverse: true
+  reverse: false
 })
 .setTween(tlPortfolio)
 // .addIndicators({name:'wave'}) // utile pour débug
@@ -151,3 +151,25 @@ const scenePortfolio = new ScrollMagic.Scene({
 
 
 // -------------------animation skills--------------------------
+const constainerSkill=document.querySelector('.rang')
+const titleSkill=document.querySelector('.title-skill')
+const labelSkill = document.querySelectorAll('.label-skill')
+const numberSkill =document.querySelectorAll('.number-skill')
+const skillBar =document.querySelectorAll('.skill-bar')
+const greyBar = document.querySelectorAll('.grey-bar')
+ 
+const tlSkills= new TimelineMax();
+tlSkills
+.from(titleSkill,{y:-50, opacity:0, duration:0.5})
+.staggerFrom(labelSkill,1,{opacity:0},0.1, '-=0.5')
+.staggerFrom(numberSkill,1,{opacity:0} ,0.1 , '-=1')
+.staggerFrom(skillBar,1,{opacity:0}, 0.1 , '-=1')
+.staggerFrom(greyBar,1,{opacity:0},0.1, '-=1')
+
+const sceneSkills= new ScrollMagic.Scene({
+
+    triggerElement:constainerSkill,
+    reverse :false
+})
+.setTween(tlSkills)
+.addTo(controller)  

@@ -23,10 +23,17 @@
   height: auto;
   background: #f0f0f0;
   color: #333;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   cursor: pointer;
-}
+   transform: scale(1);               /* taille normale au départ */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
+.item:hover {
+    transform: scale(1.2); 
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); 
+
+  }
 .cont-img-port{
     width: 100%;
     height: auto;
@@ -59,7 +66,7 @@
   position:relative;
   overflow:hidden;              
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);   /* discrète au repos */
-  transition: background 0.25s,
+  transition: background 0.25s, 
               box-shadow 0.3s ease,
               transform  0.2s ease;
 }
